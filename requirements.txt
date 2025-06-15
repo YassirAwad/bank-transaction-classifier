@@ -1,0 +1,7 @@
+pandas
+scikit-learn
+nltk
+pytest
+flake8
+black
+spacy
