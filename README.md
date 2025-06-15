@@ -13,9 +13,20 @@ The main goal is to **replace rare or unique tokens in transaction descriptions 
 - Clean and analyze raw transaction descriptions
 - Identify and replace rare tokens using semantic or pattern-based logic
 - Generalize descriptions using class tokens (e.g., `[Restaurants]`)
-- Optional: Train a simple classifier to predict transaction categories
-- Optional: Create Power BI visualizations to explore token frequencies and category distributions
+- Train a simple classifier to predict transaction categories
+- Create Power BI visualizations to explore token frequencies and category distributions
 - Includes minimal testing and GitHub Actions CI for professional project hygiene
 
 ### 📁 Project Structure
 
+bank-transaction-classifier/
+│
+├── data/ # Raw dataset (CSV)
+├── notebooks/ # Jupyter notebooks for exploration and development
+├── src/ # Preprocessing scripts
+├── tests/ # Unit tests
+├── .github/workflows/ # CI pipeline (lint + test)
+├── reports/ # Final report/write-up
+├── README.md
+├── requirements.txt
+└── .gitignore
