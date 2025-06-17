@@ -31,7 +31,7 @@ bank-transaction-classifier/
 │
 ├── src/                          # Core preprocessing code
 │   ├── preprocess.py             # Token replacement logic
-│   └── utils.py                  # (Optional) helper functions
+│ 
 │
 ├── tests/
 │   └── test_preprocess.py        # Unit tests for preprocessing logic
