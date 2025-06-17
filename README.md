@@ -1,18 +1,18 @@
 
-# 📊 Semantic Tokenization & Classification of Bank Transactions
+# Semantic Tokenization & Classification of Bank Transactions
 
 This project demonstrates how to improve transaction classification by preprocessing text-based descriptions using rule-based token replacement. Rare or noisy vendor/location tokens are replaced with general class tokens such as `[restaurant]`, `[location]`, and `[date]` to enhance model generalization.
 
 ---
 
-## 🧭 Project Overview
+## Project Overview
 
 **Objective:**
 Transform transaction descriptions into standardized formats using semantic tokens to reduce vocabulary noise and improve classification accuracy.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 bank-transaction-classifier/
@@ -45,14 +45,14 @@ bank-transaction-classifier/
 
 ---
 
-## ⚙️ How It Works
+##  How It Works
 
-### ✅ Description Normalization
+###  Description Normalization
 
 * Lowercased all text
 * Removed or replaced inline date patterns like `* 14 Oct` → `[date]`
 
-### ✅ Token Replacement Strategy
+###  Token Replacement Strategy
 
 | Token          | Replaces Examples             | Purpose                      |
 | -------------- | ----------------------------- | ---------------------------- |
@@ -62,7 +62,7 @@ bank-transaction-classifier/
 | `[location]`   | Bryanston, Arcadia, Craighall | Removes branch/region noise  |
 | `[date]`       | `* 12 Oct`, `* 15 Sep`        | Removes date-specific tokens |
 
-### ✅ Location & Type Inference
+###  Location & Type Inference
 
 * Inserted `[location]` between `[restaurant]`/`[garage]` and `[date]`
 * Inferred `[restaurant]` when missing for known `Eating Out` transactions
@@ -73,9 +73,9 @@ bank-transaction-classifier/
 
 | Metric            | Raw Description | Tokenized | Improvement |
 | ----------------- | --------------- | --------- | ----------- |
-| Accuracy          | 0.75            | 0.84      | ✅ +0.09     |
-| Macro F1-Score    | 0.52            | 0.60      | ✅ +0.08     |
-| Weighted F1-Score | 0.69            | 0.79      | ✅ +0.10     |
+| Accuracy          | 0.75            | 0.84      |  +0.09     |
+| Macro F1-Score    | 0.52            | 0.60      |  +0.08     |
+| Weighted F1-Score | 0.69            | 0.79      |  +0.10     |
 
 Tokenization notably improved performance for:
 
@@ -86,7 +86,7 @@ Tokenization notably improved performance for:
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 Run unit tests for the preprocessing logic:
 
@@ -102,7 +102,7 @@ Covers:
 
 ---
 
-## 💻 Running the Tokenizer
+##  Running the Tokenizer
 
 ```python
 from src.preprocess import replace_tokens
@@ -113,7 +113,7 @@ df.to_csv("data/transactions_tokenized.csv", index=False)
 
 ---
 
-## 📄 Writeup
+##  Writeup
 
 For a complete explanation of:
 
@@ -128,7 +128,7 @@ For a complete explanation of:
 
 ## 👤 Author
 
-Developed by **YassirAwad**
+Developed by **Yassir Ali**
 As part of a Data Science test assessment.
 
 > “Tokenizing noise into meaning.”
